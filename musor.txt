@@ -1,0 +1,434 @@
+<?php include "header.php" ?>
+<form name="choose_design" action="result.php" method="POST">
+  <div class="container">
+    <div class="modal-header">
+      <h5 class="modal-title">Тест для подбора дизайна</h5>
+    </div>
+    <div class="card">
+      <div class="card-body">
+      <div id="vopros1" style="display:block;">
+        <h5>1. Ваш возраст?</h5>
+        <img class="img-fluid mx-auto d-block" src="pictures/test/g1.jpg"/>
+        <span class="placeholder col-12 bg-light"></span>
+        <div class="alert alert-secondary" role="alert">
+            <select class="form-select" name="q1" id="z_1" onchange="checkform()" required>
+              <option selected disabled value>Выберите вариант</option>
+              <option value="1">до 18</option>
+              <option value="2">18-25</option>
+              <option value="3">25-34</option>
+              <option value="4">35-44</option>
+              <option value="5">44-54</option>
+              <option value="6">55+</option>
+            </select>
+        </div>
+      </div>
+      <div id="vopros2" style="display:none;">
+        <h5>2. Влияет ли время года на выбор вашего маникюра?</h5>
+        <img class="img-fluid mx-auto d-block" src="pictures/test/g11.jpg"/>
+        <span class="placeholder col-12 bg-light"></span>
+        <div class="alert alert-secondary" role="alert">
+          <select class="form-select" name="q2" id="z_2" onchange="checkform()" required>
+            <option selected disabled value>Выберите вариант</option>
+            <option value="1">Зима</option>
+            <option value="2">Весна</option>
+            <option value="3">Лето</option>
+            <option value="4">Осень</option>
+            <option value="5">Не влияет</option>
+          </select>
+        </div>
+      </div>
+      <div id="vopros3" style="display:none;">
+        <h5>3. Какая у вас форма ногтей?</h5>
+        <img class="img-fluid mx-auto d-block" src="pictures/test/g3.png"/>
+        <span class="placeholder col-12 bg-light"></span>
+        <div class="alert alert-secondary" role="alert">
+          <select class="form-select" name="q3" id="z_3" onchange="checkform()" required>
+            <option selected disabled value>Выберите форму</option>
+            <option value="1">Овальная</option>
+            <option value="2">Квадратная</option>
+            <option value="3">Треугольная</option>
+            <option value="4">Прямоугольная</option>
+          </select>
+        </div>
+      </div>
+      <div id="vopros4" style="display:none;">
+        <h5>4. Какую цветовую гамму вы предпочитаете в одедже?</h5>
+        <img class="img-fluid mx-auto d-block" src="pictures/test/g14.png"/>
+        <span class="placeholder col-12 bg-light"></span>
+        <div class="alert alert-secondary" role="alert">
+          <select class="form-select" name="q4" id="z_4" onchange="checkform()" required>
+            <option selected disabled value>Выберите цвет</option>
+            <option value="1">Пастельные и нежные оттенки</option>
+            <option value="2">Яркие цвета</option>
+            <option value="3">Классические цвета (белый, черный)</option>
+            <option value="4">Темные оттенки</option>
+            <option value="4">Разные</option>
+          </select>
+        </div>
+      </div>
+      <div id="vopros5" style="display:none;">
+        <h5>5. Какой дизайн вы предпочитаете?</h5>
+        <img class="img-fluid mx-auto d-block" src="pictures/test/g12.png"/>
+        <span class="placeholder col-12 bg-light"></span>
+        <div class="alert alert-secondary" role="alert">
+          <select class="form-select" name="q5" id="z_5" onchange="checkform()" required>
+            <option selected disabled value>Выберите дизайн</option>
+            <option value="1">Рисунок</option>
+            <option value="2">Кошачий глаз</option>
+            <option value="3">Втирка</option>
+            <option value="4">Пузырчатый</option>
+            <option value="5">Однотонное покрытие</option>
+            <option value="6">Разноцветные ногти</option>
+            <option value="7">Френч (классический, цветной)</option>
+          </select>
+        </div>
+      </div>
+      <div id="vopros6" style="display:none;">
+        <h5>6. Какую длину вы предпочитаете?</h5>
+        <img class="img-fluid mx-auto d-block" src="pictures/test/g13.jpg"/>
+        <span class="placeholder col-12 bg-light"></span>
+        <div class="alert alert-secondary" role="alert">
+          <select class="form-select" name="q6" id="z_6" onchange="checkform()" required>
+            <option selected disabled value>Выберите длину</option>
+            <option value="1">Короткие</option>
+            <option value="2">Средние</option>
+            <option value="3">Длинные</option>
+            <option value="4">Очень длинные</option>
+          </select>
+        </div>
+      </div>
+      <div id="vopros7" style="display:none;">
+        <h5>7. Какую форму вы предпочитаете?</h5>
+        <img class="img-fluid mx-auto d-block" src="pictures/test/g10.png"/>
+        <span class="placeholder col-12 bg-light"></span>
+        <div class="alert alert-secondary" role="alert">
+          <select class="form-select" name="q7" id="z_7" required>
+            <option selected disabled value>Выберите форму</option>
+            <option value="1">Квадрат</option>
+            <option value="2">Мягкий квадрат</option>
+            <option value="3">Сквуовал</option>
+            <option value="4">Овальная</option>
+            <option value="5">Миндаль</option>
+            <option value="6">Стилет</option>
+            <option value="7">Трапеция</option>
+            <option value="8">Балерина</option>
+            <option value="9">Эйдж</option>
+            <option value="10">Скошенная</option>
+            <option value="11">Стрела</option>
+            <option value="12">Круглые</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="d-grid gap-2">
+      <button id="kn_sl" name="kn_sl" class="btn btn-secondary btn-lg" onclick="sled_vopr();" style="display:none;">Следующий вопрос</button>
+      <button id="kn_pr" class="btn btn-secondary btn-lg" style="display:none;" onclick="result();">Проверить</button>
+    </div>
+    </div>
+    </div>
+  </div>
+</form>
+<script>
+function sled_vopr(){
+    if(document.getElementById('vopros6').style.display == "block"){
+        document.getElementById('vopros6').style.display = "none";
+        document.getElementById('vopros7').style.display = "block";
+        document.getElementById('kn_sl').style.display = "none";
+        document.getElementById('kn_pr').style.display = "block";
+    }
+    if(document.getElementById('vopros5').style.display == "block"){
+        document.getElementById('vopros5').style.display = "none";
+        document.getElementById('vopros6').style.display = "block";
+    }
+    if(document.getElementById('vopros4').style.display == "block"){
+        document.getElementById('vopros4').style.display = "none";
+        document.getElementById('vopros5').style.display = "block";
+    }
+    if(document.getElementById('vopros3').style.display == "block"){
+        document.getElementById('vopros3').style.display = "none";
+        document.getElementById('vopros4').style.display = "block";
+    }
+    if(document.getElementById('vopros2').style.display == "block"){
+        document.getElementById('vopros2').style.display = "none";
+        document.getElementById('vopros3').style.display = "block";
+    }
+    if(document.getElementById('vopros1').style.display == "block"){
+        document.getElementById('vopros1').style.display = "none";
+        document.getElementById('vopros2').style.display = "block";
+    }
+}
+function checkform()
+{
+  var f = document.forms["choose_design"].elements;
+  var cansubmit = true;
+
+  for (var i = 0; i < f.length; i++) {
+      if (f[i].value > 0) {
+        cansubmit = false;
+        if (cansubmit == false) {
+            document.getElementById('kn_sl').style.display = "block";
+        }
+        window.onload = function(){
+          document.querySelector('kn_sl').onclick = function(){
+            document.getElementById('kn_sl').style.display = "none";
+          }
+        }
+        i++;
+      }
+  }
+}
+
+</script>
+<?php include "footer.php" ?>
+
+
+<?php
+include "dbconnection.php";
+$raw_sql_types = "SELECT name FROM type ORDER BY name;";
+$raw_sql_service_names = "select t.name t_name, ts.name ts_name from `type_service` ts inner join `type` t on ts.id_type = t.id ORDER BY t.name;";
+$raw_sql_masters = "select t.name t_name, m.first_name, m.last_name
+from `masters` m
+	inner join `masters_&_type` mt on m.id = mt.id_master
+    inner join `type` t on mt.id_type = t.id
+ORDER BY t.name;";
+
+$types = $pdo->query($raw_sql_types)->fetchAll(PDO::FETCH_ASSOC);
+$service_names = $pdo->query($raw_sql_service_names)->fetchAll(PDO::FETCH_ASSOC);
+$masters = $pdo->query($raw_sql_masters)->fetchAll(PDO::FETCH_ASSOC);
+
+$tmp = array();
+foreach ($service_names as $value)
+{
+	$tmp[$value['t_name']][] = $value['ts_name'];
+}
+$service_names = $tmp;
+
+$tmp = array();
+foreach ($masters as $value)
+{
+	$tmp[$value['t_name']][] = $value['first_name']." ".$value['last_name'];
+}
+$masters = $tmp;
+
+var_dump($masters);
+var_dump($service_names);
+/**
+ *
+ * Скрипт, обрабатывающий POST-запросы от JavaScript-сценариев
+ * Скрипт получает строку запроса, а в ответ отправляет массив с данными
+ */
+// Непосредственно для этого скрипта мы создадим здесь массивы, в которых будут храниться
+// значения, запрашиваемые JavaScript-сценарием. В ваших сценариях этих массивов, скорее всего,
+// не будет. Информация, подобная этой, будет в вашей базе данных, и вам её придется оттуда
+// извлечь. Как вы это сделаете, это уже ваши предпочтения
+
+$types =
+$types = array(
+	1 => $masters_brov,
+	2 => $pdo->query($sql_masters_cosm)->fetchAll(PDO::FETCH_ASSOC),
+	3 => $pdo->query($sql_masters_makeup)->fetchAll(PDO::FETCH_COLUMN),
+	4 => $pdo->query($sql_masters_manic)->fetchAll(PDO::FETCH_COLUMN),
+	5 => $pdo->query($sql_masters_hair_color)->fetchAll(PDO::FETCH_COLUMN),
+	6 => $pdo->query($sql_masters_hair)->fetchAll(PDO::FETCH_COLUMN),
+	7 => $pdo->query($sql_masters_pedic)->fetchAll(PDO::FETCH_COLUMN),
+	8 => $pdo->query($sql_masters_hair_recovery)->fetchAll(PDO::FETCH_COLUMN),
+	9 => $pdo->query($sql_masters_resn)->fetchAll(PDO::FETCH_COLUMN)
+);
+$kinds = array(
+	1 => $pdo->query($sql_brov)->fetchAll(PDO::FETCH_COLUMN),
+	2 => $pdo->query($sql_cosm)->fetchAll(PDO::FETCH_COLUMN),
+	3 => $pdo->query($sql_makeup)->fetchAll(PDO::FETCH_COLUMN),
+	4 => $pdo->query($sql_manic)->fetchAll(PDO::FETCH_COLUMN),
+	5 => $pdo->query($sql_hair_color)->fetchAll(PDO::FETCH_COLUMN),
+	6 => $pdo->query($sql_hair)->fetchAll(PDO::FETCH_COLUMN),
+	7 => $pdo->query($sql_pedic)->fetchAll(PDO::FETCH_COLUMN),
+	8 => $pdo->query($sql_hair_recovery)->fetchAll(PDO::FETCH_COLUMN),
+	9 => $pdo->query($sql_resn)->fetchAll(PDO::FETCH_COLUMN)
+);
+// Проверяем наличие переменной, которая укажет данному сценарию какие именно данные нужны
+if (!isset($_POST['query']) || !$_POST['query']) {
+	exit("Нет данных определяющих тип запроса");
+}
+else {
+	// Сохраняем строку запроса данных в отдельной переменной
+	$query = trim($_POST['query']); // Очищаем от лишних пробелов
+
+	// Определяем тип запроса
+	switch($query) {
+	case 'getKinds':	// Запрос на получение видов транспорта
+		// Сохраним в переменную значение выбранного типа транспорта
+		$type_id = trim($_POST['type_id']); // Очистим его от лишних пробелов
+		// Формируем массив с ответом
+		$result = NULL;
+		$i = 0;
+		foreach ($types[$type_id] as $kind_id => $kind) {
+			$result[$i]['kind_id'] = $kind_id;
+			$result[$i]['kind'] = $kind;
+			$i++;
+		}
+	break;
+	case 'getCategories':	// Запрос на получение категорий транспорта
+		// Сохраним в переменные значения выбранных типа транспорта и вида транспорта
+		$type_id = trim($_POST['type_id']); // Очистим их от лишних пробелов
+		$kind_id = trim($_POST['kind_id']);
+		// Формируем массив с ответом
+		$result = NULL;
+		$i = 0;
+		foreach ($kinds[$type_id][$kind_id] as $category_id => $category) {
+			$result[$i]['category_id'] = $category_id;
+			$result[$i]['category'] = $category;
+			$i++;
+		}
+	break;
+	default:
+		// Если данные не определены
+		$result = NULL;
+	break;
+	}
+}
+
+// Преобразуем данные в формат json, чтобы их смог обработать JavaScript-сценарий, приславший запрос
+echo json_encode($result);
+
+/**
+ * Данный код не идеален. Сама идея представления исходных данных о транспорте в виде массива очень
+ * далека от идеала. И вы должны понимать почему. Данные должны храниться в реляционной базе данных,
+ * а представленный вариант написания сценария является лишь простейшим примером, который не стоит
+ * в таком виде применять на практике. Вы здесь должны лишь понять принципы работы языка и взаимодействия
+ * между языками программирования
+ */
+?>
+
+
+<?php include "header.php" ?>
+<form name="choose_design" action="result.php" method="POST">
+  <div class="container">
+    <div class="modal-header">
+      <h5 class="modal-title">Тест для подбора дизайна</h5>
+    </div>
+    <div class="card">
+      <div class="card-body">
+      <div id="vopros1">
+        <h5>1. Ваш возраст?</h5>
+        <img class="img-fluid mx-auto d-block" src="pictures/test/g1.jpg"/>
+        <span class="placeholder col-12 bg-light"></span>
+        <div class="alert alert-secondary" role="alert">
+            <select class="form-select" name="q1" id="z_1" required>
+              <option selected disabled value>Выберите вариант</option>
+              <option value="1">до 18</option>
+              <option value="2">18-25</option>
+              <option value="3">25-34</option>
+              <option value="4">35-44</option>
+              <option value="5">44-54</option>
+              <option value="6">55+</option>
+            </select>
+        </div>
+      </div>
+      <div id="vopros2">
+        <h5>2. Влияет ли время года на выбор вашего маникюра?</h5>
+        <img class="img-fluid mx-auto d-block" src="pictures/test/g11.jpg"/>
+        <span class="placeholder col-12 bg-light"></span>
+        <div class="alert alert-secondary" role="alert">
+          <select class="form-select" name="q2" id="z_2" required>
+            <option selected disabled value>Выберите вариант</option>
+            <option value="1">Зима</option>
+            <option value="2">Весна</option>
+            <option value="3">Лето</option>
+            <option value="4">Осень</option>
+            <option value="5">Не влияет</option>
+          </select>
+        </div>
+      </div>
+      <div id="vopros3">
+        <h5>3. Какая у вас форма ногтей?</h5>
+        <img class="img-fluid mx-auto d-block" src="pictures/test/g3.png"/>
+        <span class="placeholder col-12 bg-light"></span>
+        <div class="alert alert-secondary" role="alert">
+          <select class="form-select" name="q3" id="z_3" required>
+            <option selected disabled value>Выберите форму</option>
+            <option value="1">Овальная</option>
+            <option value="2">Квадратная</option>
+            <option value="3">Треугольная</option>
+            <option value="4">Прямоугольная</option>
+          </select>
+        </div>
+      </div>
+      <div id="vopros4">
+        <h5>4. Какую цветовую гамму вы предпочитаете в одедже?</h5>
+        <img class="img-fluid mx-auto d-block" src="pictures/test/g14.png"/>
+        <span class="placeholder col-12 bg-light"></span>
+        <div class="alert alert-secondary" role="alert">
+          <select class="form-select" name="q4" id="z_4" required>
+            <option selected disabled value>Выберите цвет</option>
+            <option value="1">Пастельные и нежные оттенки</option>
+            <option value="2">Яркие цвета</option>
+            <option value="3">Классические цвета (белый, черный)</option>
+            <option value="4">Темные оттенки</option>
+            <option value="4">Разные</option>
+          </select>
+        </div>
+      </div>
+      <div id="vopros5">
+        <h5>5. Какой дизайн вы предпочитаете?</h5>
+        <img class="img-fluid mx-auto d-block" src="pictures/test/g12.png"/>
+        <span class="placeholder col-12 bg-light"></span>
+        <div class="alert alert-secondary" role="alert">
+          <select class="form-select" name="q5" id="z_5" required>
+            <option selected disabled value>Выберите дизайн</option>
+            <option value="1">Рисунок</option>
+            <option value="2">Кошачий глаз</option>
+            <option value="3">Втирка</option>
+            <option value="4">Пузырчатый</option>
+            <option value="5">Однотонное покрытие</option>
+            <option value="6">Разноцветные ногти</option>
+            <option value="7">Френч (классический, цветной)</option>
+          </select>
+        </div>
+      </div>
+      <div id="vopros6">
+        <h5>6. Какую длину вы предпочитаете?</h5>
+        <img class="img-fluid mx-auto d-block" src="pictures/test/g13.jpg"/>
+        <span class="placeholder col-12 bg-light"></span>
+        <div class="alert alert-secondary" role="alert">
+          <select class="form-select" name="q6" id="z_6" required>
+            <option selected disabled value>Выберите длину</option>
+            <option value="1">Короткие</option>
+            <option value="2">Средние</option>
+            <option value="3">Длинные</option>
+            <option value="4">Очень длинные</option>
+          </select>
+        </div>
+      </div>
+      <div id="vopros7">
+        <h5>7. Какую форму вы предпочитаете?</h5>
+        <img class="img-fluid mx-auto d-block" src="pictures/test/g10.png"/>
+        <span class="placeholder col-12 bg-light"></span>
+        <div class="alert alert-secondary" role="alert">
+          <select class="form-select" name="q7" id="z_7" required>
+            <option selected disabled value>Выберите форму</option>
+            <option value="1">Квадрат</option>
+            <option value="2">Мягкий квадрат</option>
+            <option value="3">Сквуовал</option>
+            <option value="4">Овальная</option>
+            <option value="5">Миндаль</option>
+            <option value="6">Стилет</option>
+            <option value="7">Трапеция</option>
+            <option value="8">Балерина</option>
+            <option value="9">Эйдж</option>
+            <option value="10">Скошенная</option>
+            <option value="11">Стрела</option>
+            <option value="12">Круглые</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="d-grid gap-2">
+      <button id="kn_pr" class="btn btn-secondary btn-lg">Проверить</button>
+    </div>
+    </div>
+    </div>
+  </div>
+</form>
+<?php include "footer.php" ?>

@@ -1,0 +1,14 @@
+var vopros_1 = "1. Ваш возраст?";
+var vopros_2 = "2. Влияет ли время года на выбор вашего маникюра?";
+var vopros_3 = "3. Какая у вас форма ногтей?";
+var vopros_4 = "4. Какую цветовую гамму вы предпочитаете в одедже?";
+var vopros_5 = "5. Какой дизайн вы предпочитаете?";
+var vopros_6 = "6. Какую длину вы предпочитаете?";
+var vopros_7 = "7. Какую форму вы предпочитаете?";
+var vopros_ris_1 = "да";
+var vopros_ris_2 = "да";
+var vopros_ris_3 = "да";
+var vopros_ris_4 = "да";
+var vopros_ris_5 = "да";
+var vopros_ris_6 = "да";
+var vopros_ris_7 = "да";
